@@ -106,6 +106,7 @@ Supporting OS subroutine required: None
 #include <time.h>
 #include <limits.h>
 #include "local.h"
+#include <sys/syslimits.h>
 
 #define TZNAME_MIN	3	/* POSIX min TZ abbr size local def */
 

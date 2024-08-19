@@ -19,7 +19,7 @@ jobs:
           - mips-freestanding
           - mipsel-freestanding
           - thumb-freestanding
-          - arm-freestanding
+          - arm-freestanding  -Dcpu=cortex_a7
 
     runs-on: ubuntu-latest
     steps:
@@ -27,9 +27,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - uses: korandoru/setup-zig@v1
-        with:
-          zig-version: 0.12.0
+      - uses: mlugg/setup-zig@v1
 
       - name: Build Summary ${{ matrix.targets }}
         run: zig build --summary all -freference-trace -Dtarget=${{ matrix.targets }}
