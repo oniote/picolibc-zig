@@ -1,0 +1,6 @@
+.vscode/
+*.code-workspace
+
+.zig-cache/
+zig-cache/
+zig-out/
